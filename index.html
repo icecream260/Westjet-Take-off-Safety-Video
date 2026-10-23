@@ -16,74 +16,93 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            /* Deeper, chill slate-grey background gradient to make the glass pop */
-            background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 50%, #94a3b8 100%);
+            /* Animated liquid background to warp through the glass */
+            background: linear-gradient(-45deg, #cbd5e1, #94a3b8, #64748b, #cbd5e1);
+            background-size: 400% 400%;
+            animation: liquidFlow 15s ease infinite;
             background-attachment: fixed;
             padding: 24px;
         }
-        /* Smokey, light-ish grey glass container with high frosted blur */
-        .smokey-glass-card {
-            background: rgba(30, 41, 59, 0.45); /* Translucent charcoal grey overlay */
-            backdrop-filter: blur(25px) saturate(130%);
-            -webkit-backdrop-filter: blur(25px) saturate(130%);
-            border-radius: 24px;
-            /* Sleek structural highlight border */
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            padding: 40px;
-            max-width: 800px;
+
+        /* Ambient liquid background movement */
+        @keyframes liquidFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* High-Gloss Liquid Glass Container */
+        .liquid-glass-card {
+            /* Translucent layer that pulls colors dynamically from behind it */
+            background: rgba(30, 41, 59, 0.4); 
+            backdrop-filter: blur(35px) saturate(220%);
+            -webkit-backdrop-filter: blur(35px) saturate(220%);
+            border-radius: 28px;
+            /* Fine reflection boundary to simulate a liquid mercury shell */
+            border-top: 1.5px solid rgba(255, 255, 255, 0.3);
+            border-left: 1.5px solid rgba(255, 255, 255, 0.2);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 44px;
+            max-width: 820px;
             width: 100%;
             text-align: center;
-            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15),
-                        inset 0 1px 1px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.15);
         }
+
         h1 {
-            color: #ffffff; /* White title stands out beautifully on dark glass */
+            color: #ffffff;
             font-size: 1.8rem;
             margin-bottom: 28px;
             font-weight: 600;
             letter-spacing: -0.4px;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+            text-shadow: 0 1px 3px rgba(0,0,0,0.15);
         }
-        /* Elegant video player canvas highlighted by the dark background */
+
+        /* Sharp video canvas contrasted against the fluid card */
         video {
             max-width: 100%;
             width: 100%;
-            border-radius: 14px;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
             background-color: #000000;
             outline: none;
         }
-        /* Crisp, vivid Apple-style blue system button */
+
+        /* Vivid Electric-Blue Accent Button */
         .download-btn {
             display: inline-block;
-            margin-top: 32px;
-            padding: 12px 32px;
-            background: #007aff; /* Apple standard system blue */
+            margin-top: 36px;
+            padding: 12px 36px;
+            background: #007aff;
             color: #ffffff;
             text-decoration: none;
-            border-radius: 980px; /* Clean pill shape */
+            border-radius: 980px;
             font-weight: 600;
             font-size: 0.95rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 14px rgba(0, 122, 255, 0.4);
         }
+
         .download-btn:hover {
-            background: #0066cc; /* Deeper blue on hover */
-            transform: translateY(-1px);
-            box-shadow: 0 6px 16px rgba(0, 122, 255, 0.45);
+            background: #0066cc;
+            transform: translateY(-2px) scale(1.01);
+            box-shadow: 0 8px 20px rgba(0, 122, 255, 0.55);
         }
+
         .download-btn:active {
-            transform: translateY(0);
+            transform: translateY(0) scale(0.99);
             background: #0055aa;
-            box-shadow: 0 2px 6px rgba(0, 122, 255, 0.2);
+            box-shadow: 0 2px 6px rgba(0, 122, 255, 0.3);
         }
     </style>
 </head>
 <body>
 
-    <div class="smokey-glass-card">
+    <div class="liquid-glass-card">
         <h1>Westjet Take-off Safety Video</h1>
 
         <!-- Embedded Live Streaming Video Player -->
@@ -94,7 +113,7 @@
 
         <br>
         
-        <!-- Vibrant Blue Download Action Button -->
+        <!-- Action Button -->
         <a href="EsteeC_WestJet%20Take-off%20Safety%20Video.mp4" download class="download-btn">
             Download Video
         </a>
