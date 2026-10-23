@@ -16,7 +16,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            /* Chill, moving liquid background using only clean white and soft silver-greys */
+            /* Soft moving liquid silver background */
             background: linear-gradient(-45deg, #f8fafc, #e2e8f0, #cbd5e1, #f1f5f9);
             background-size: 400% 400%;
             animation: liquidFlow 18s ease infinite;
@@ -24,7 +24,6 @@
             padding: 24px;
         }
 
-        /* Fluid background movement */
         @keyframes liquidFlow {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -33,12 +32,11 @@
 
         /* Bright, high-gloss liquid glass pane */
         .light-glass-card {
-            /* Light-ish grey transparent base that acts like pure frosted crystal */
             background: rgba(255, 255, 255, 0.35); 
             backdrop-filter: blur(30px) saturate(160%);
             -webkit-backdrop-filter: blur(30px) saturate(160%);
             border-radius: 28px;
-            /* Polished white reflection rim to establish the glass layer */
+            /* Polished structural highlight edge */
             border-top: 1.5px solid rgba(255, 255, 255, 0.6);
             border-left: 1.5px solid rgba(255, 255, 255, 0.4);
             border-right: 1px solid rgba(255, 255, 255, 0.2);
@@ -47,55 +45,28 @@
             max-width: 820px;
             width: 100%;
             text-align: center;
-            /* Subtle shadows matching a soft grey environment */
             box-shadow: 0 20px 50px -12px rgba(100, 116, 139, 0.15),
                         inset 0 1px 0 rgba(255, 255, 255, 0.4);
         }
 
         h1 {
-            color: #334155; /* Soft slate charcoal text for maximum legibility */
+            color: #334155;
             font-size: 1.8rem;
             margin-bottom: 28px;
             font-weight: 600;
             letter-spacing: -0.4px;
         }
 
-        /* Sleek video framework */
+        /* Clean, borderless video frame */
         video {
             max-width: 100%;
             width: 100%;
             border-radius: 16px;
-            box-shadow: 0 16px 36px rgba(15, 23, 42, 0.15);
+            border: none; /* Completely removes the border outline */
+            box-shadow: none; /* Removes the drop shadow to keep it totally clean */
             background-color: #000000;
             outline: none;
-        }
-
-        /* Vibrant Electric-Blue Download Button */
-        .download-btn {
-            display: inline-block;
-            margin-top: 36px;
-            padding: 12px 36px;
-            background: #007aff;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 980px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 14px rgba(0, 122, 255, 0.35);
-        }
-
-        .download-btn:hover {
-            background: #0066cc;
-            transform: translateY(-2px) scale(1.01);
-            box-shadow: 0 8px 20px rgba(0, 122, 255, 0.5);
-        }
-
-        .download-btn:active {
-            transform: translateY(0) scale(0.99);
-            background: #0055aa;
-            box-shadow: 0 2px 6px rgba(0, 122, 255, 0.25);
+            display: block; /* Prevents tiny layout gaps under the video element */
         }
     </style>
 </head>
@@ -104,18 +75,11 @@
     <div class="light-glass-card">
         <h1>Westjet Take-off Safety Video</h1>
 
-        <!-- Embedded Live Streaming Video Player -->
-        <video controls>
+        <!-- Stream-only configuration block -->
+        <video controls controlsList="nodownload" oncontextmenu="return false;">
             <source src="EsteeC_WestJet%20Take-off%20Safety%20Video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-
-        <br>
-        
-        <!-- Blue Action Button -->
-        <a href="EsteeC_WestJet%20Take-off%20Safety%20Video.mp4" download class="download-btn">
-            Download Video
-        </a>
     </div>
 
 </body>
