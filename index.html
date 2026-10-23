@@ -5,53 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WestJet Take-off Safety Video</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Smooth mesh-like background gradient */
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0369a1 100%);
+            padding: 20px;
+        }
+        /* The Glass Card Container */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(16px) saturate(120%);
+            -webkit-backdrop-filter: blur(16px) saturate(120%);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
             padding: 40px;
-            background-color: #f4f4f9;
+            max-width: 850px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
         }
         h1 {
-            color: #333;
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 24px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
+        /* Video Container styled to blend into the card */
         video {
             max-width: 100%;
-            width: 800px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            margin-top: 20px;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            outline: none;
         }
+        /* Glowing Glassmorphic Button */
         .download-btn {
             display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
+            margin-top: 28px;
+            padding: 12px 28px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            color: #ffffff;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
+            border-radius: 8px;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         .download-btn:hover {
-            background-color: #0056b3;
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,255,255,0.15);
+        }
+        .download-btn:active {
+            transform: translateY(0);
         }
     </style>
 </head>
 <body>
 
-    <h1>Westjet Take-off Safety Video</h1>
+    <div class="glass-card">
+        <h1>Westjet Take-off Safety Video</h1>
 
-    <!-- Embedded Live Streaming Video Player -->
-    <video controls>
-        <source src="EsteeC_WestJet%20Take-off%20Safety%20Video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+        <!-- Embedded Live Streaming Video Player -->
+        <video controls>
+            <source src="EsteeC_WestJet%20Take-off%20Safety%20Video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
-    <br>
-    
-    <!-- Direct File Download Button -->
-    <a href="EsteeC_WestJet%20Take-off%20Safety%20Video.mp4" download class="download-btn">
-        Download Video File
-    </a>
+        <!-- Direct File Download Button -->
+        <br>
+        <a href="EsteeC_WestJet%20Take-off%20Safety%20Video.mp4" download class="download-btn">
+            Download Video
+        </a>
+    </div>
 
 </body>
 </html>
