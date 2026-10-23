@@ -11,75 +11,83 @@
             padding: 0;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            /* Smooth mesh-like background gradient */
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0369a1 100%);
-            padding: 20px;
+            /* Apple style liquid aurora mesh background */
+            background: radial-gradient(circle at 20% 20%, #ff7ebb 0%, transparent 40%),
+                        radial-gradient(circle at 80% 40%, #60a5fa 0%, transparent 50%),
+                        radial-gradient(circle at 40% 80%, #a855f7 0%, transparent 60%),
+                        #0f172a; 
+            background-attachment: fixed;
+            padding: 24px;
         }
-        /* The Glass Card Container */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.07);
-            backdrop-filter: blur(16px) saturate(120%);
-            -webkit-backdrop-filter: blur(16px) saturate(120%);
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
+        /* Crisp Apple-style Frosted Glass Card */
+        .apple-glass-card {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(30px) saturate(200%);
+            -webkit-backdrop-filter: blur(30px) saturate(200%);
+            border-radius: 24px;
+            /* Fine distinct glass boundary */
+            border: 1px solid rgba(255, 255, 255, 0.5);
             padding: 40px;
-            max-width: 850px;
+            max-width: 800px;
             width: 100%;
             text-align: center;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15), 
+                        0 2px 6px rgba(0, 0, 0, 0.05);
         }
         h1 {
-            color: #ffffff;
+            color: #1d1d1f; /* Apple standard dark text */
             font-size: 2.2rem;
             margin-bottom: 24px;
-            font-weight: 600;
+            font-weight: 700;
             letter-spacing: -0.5px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
-        /* Video Container styled to blend into the card */
+        /* Sleek video container */
         video {
             max-width: 100%;
             width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            background-color: #000;
             outline: none;
         }
-        /* Glowing Glassmorphic Button */
+        /* Apple Translucent UI System Button */
         .download-btn {
             display: inline-block;
-            margin-top: 28px;
-            padding: 12px 28px;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(4px);
-            -webkit-backdrop-filter: blur(4px);
-            color: #ffffff;
+            margin-top: 32px;
+            padding: 12px 32px;
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: #1d1d1f;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 980px; /* Fully pill-shaped like iOS native buttons */
             font-weight: 600;
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            font-size: 0.95rem;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
         .download-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
-            border-color: rgba(255, 255, 255, 0.5);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255,255,255,0.15);
+            background: rgba(255, 255, 255, 0.6);
+            border-color: rgba(255, 255, 255, 0.8);
+            transform: scale(1.02);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
         }
         .download-btn:active {
-            transform: translateY(0);
+            transform: scale(0.98);
+            background: rgba(255, 255, 255, 0.3);
         }
     </style>
 </head>
 <body>
 
-    <div class="glass-card">
+    <div class="apple-glass-card">
         <h1>Westjet Take-off Safety Video</h1>
 
         <!-- Embedded Live Streaming Video Player -->
@@ -88,7 +96,7 @@
             Your browser does not support the video tag.
         </video>
 
-        <!-- Direct File Download Button -->
+        <!-- System Style Download Button -->
         <br>
         <a href="EsteeC_WestJet%20Take-off%20Safety%20Video.mp4" download class="download-btn">
             Download Video
