@@ -16,76 +16,74 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            /* Chill, clean off-white to soft silver-grey gradient */
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+            /* Deeper, chill slate-grey background gradient to make the glass pop */
+            background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 50%, #94a3b8 100%);
             background-attachment: fixed;
             padding: 24px;
         }
-        /* Pure frost minimal glass container */
-        .chill-glass-card {
-            background: rgba(255, 255, 255, 0.4);
-            backdrop-filter: blur(20px) saturate(140%);
-            -webkit-backdrop-filter: blur(20px) saturate(140%);
-            border-radius: 20px;
-            /* Fine, bright glass edge to make it pop subtly from the gradient */
-            border: 1px solid rgba(255, 255, 255, 0.7);
+        /* Smokey, light-ish grey glass container with high frosted blur */
+        .smokey-glass-card {
+            background: rgba(30, 41, 59, 0.45); /* Translucent charcoal grey overlay */
+            backdrop-filter: blur(25px) saturate(130%);
+            -webkit-backdrop-filter: blur(25px) saturate(130%);
+            border-radius: 24px;
+            /* Sleek structural highlight border */
+            border: 1px solid rgba(255, 255, 255, 0.15);
             padding: 40px;
             max-width: 800px;
             width: 100%;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(148, 163, 184, 0.12), 
-                        0 1px 3px rgba(148, 163, 184, 0.04);
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15),
+                        inset 0 1px 1px rgba(255, 255, 255, 0.1);
         }
         h1 {
-            color: #334155; /* Soft slate charcoal instead of harsh black */
+            color: #ffffff; /* White title stands out beautifully on dark glass */
             font-size: 1.8rem;
             margin-bottom: 28px;
-            font-weight: 500;
+            font-weight: 600;
             letter-spacing: -0.4px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
         }
-        /* Elegant video player canvas */
+        /* Elegant video player canvas highlighted by the dark background */
         video {
             max-width: 100%;
             width: 100%;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
             background-color: #000000;
             outline: none;
         }
-        /* Minimalist translucent system-vibe button */
+        /* Crisp, vivid Apple-style blue system button */
         .download-btn {
             display: inline-block;
             margin-top: 32px;
-            padding: 11px 26px;
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            color: #475569;
+            padding: 12px 32px;
+            background: #007aff; /* Apple standard system blue */
+            color: #ffffff;
             text-decoration: none;
-            border-radius: 8px;
-            font-weight: 500;
-            font-size: 0.9rem;
-            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 980px; /* Clean pill shape */
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 2px 6px rgba(148, 163, 184, 0.08);
+            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
         }
         .download-btn:hover {
-            background: rgba(255, 255, 255, 0.9);
-            border-color: #ffffff;
-            color: #1e293b;
+            background: #0066cc; /* Deeper blue on hover */
             transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(148, 163, 184, 0.15);
+            box-shadow: 0 6px 16px rgba(0, 122, 255, 0.45);
         }
         .download-btn:active {
             transform: translateY(0);
-            background: rgba(255, 255, 255, 0.4);
+            background: #0055aa;
+            box-shadow: 0 2px 6px rgba(0, 122, 255, 0.2);
         }
     </style>
 </head>
 <body>
 
-    <div class="chill-glass-card">
+    <div class="smokey-glass-card">
         <h1>Westjet Take-off Safety Video</h1>
 
         <!-- Embedded Live Streaming Video Player -->
@@ -96,7 +94,7 @@
 
         <br>
         
-        <!-- Clean Download Action Button -->
+        <!-- Vibrant Blue Download Action Button -->
         <a href="EsteeC_WestJet%20Take-off%20Safety%20Video.mp4" download class="download-btn">
             Download Video
         </a>
